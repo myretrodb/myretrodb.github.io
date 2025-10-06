@@ -1,0 +1,57 @@
+/* FONTS */
+@font-face {
+    font-family: 'Early GameBoy'; /* Set font name */
+    src: url('/fonts/early-gameboy.ttf') format('truetype'); /* Load font file */
+    font-weight: normal; /* Normal weight */
+    font-style: normal; /* Normal style */
+}
+
+/* Body styling */
+body {
+    background-color: #FFFFFF; /* White fallback */
+    font-family: 'Courier New', Courier, monospace; /* Fallback font */
+    line-height: 1.6; /* Text spacing */
+    padding-top: 48px; /* Space for header */
+    padding-bottom: 40px; /* Space for footer */
+    position: relative; /* Anchor for ::before */
+}
+
+body::before { /* Background image layer */
+    content: ''; /* Required for pseudo-element */
+    position: fixed; /* Fix to viewport */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: url('/images/bg.png'); /* Tiled image */
+    background-repeat: repeat; /* Repeat image */
+    background-size: auto; /* No stretch */
+    opacity: 0.02; /* Very subtle opacity */
+    z-index: -1; /* Behind content */
+    filter: saturate(20%); /* Saturation */
+    filter: grayscale(80%); /* Grayscale */
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent black */
+    color: rgba(0, 0, 0, 0.75); /* Semi-transparent text */
+    text-align: center; /* Center text */
+    padding: 1px; /* Minimal padding */
+    width: 100%; /* Full width */
+    font-family: 'Early GameBoy', monospace; /* Retro font */
+    font-size: 8px; /* Small pixel font */
+    position: fixed; /* Fix to bottom */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+}
+
+footer a { /* Style footer links */
+    color: rgba(0, 0, 0, 0.75); /* Black link */
+    text-decoration: none; /* No underline */
+}
+
+footer a:hover { /* Style footer links on hover */
+    text-decoration: underline; /* Underline on hover */
+}
